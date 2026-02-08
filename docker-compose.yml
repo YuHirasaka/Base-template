@@ -1,0 +1,17 @@
+services:
+  nginx: 
+    container_name: "nginx-docker-compose"
+    image: nginx:1.21.1
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./src:/var/www/
+    depends_on:
+      - php
+  php:
+    container_name: "php-docker-compose"
+    build: 
+      context: ./docker/php
+    volumes:
+      - ./src:/var/www/
