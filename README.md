@@ -17,15 +17,15 @@ Nginx + PHP（FPM）を用いた最小構成で、学習用・課題提出用の
 
 base-template/
 ├── README.md
-├── docker
-│   ├── nginx
-│   │   └── default.conf
-│   └── php
-│       ├── Dockerfile
-│       └── php.ini
+├── docker/
+│ ├── nginx/
+│ │ └── default.conf
+│ └── php/
+│ ├── Dockerfile
+│ └── php.ini
 ├── docker-compose.yml
 └── src/
-    └── (phpファイルを配置)
+└── （PHPファイルを配置）
 
 ---
 
